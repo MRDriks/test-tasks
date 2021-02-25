@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flags {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flag {
+  width: 300px;
+  margin: 20px 0;
+  box-shadow: 0 0px 30px 0px rgb(240 238 238);
+}
+
+.ukraine,
+.japan,
+.iceland,
+.czech {
+  height: 175px;
+}
+
+.ukraine::before,
+.ukraine::after {
+  content: '';
+  display: block;
+  height: 50%;
+}
+
+.ukraine::before {
+  background-color: dodgerblue;
+}
+
+.ukraine::after {
+  background-color: yellow;
+}
+
+.japan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.japan::before {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: crimson;
+  border-radius: 50%;
+}
+
+.iceland {
+  background-color: #02529c;
+  position: relative;
+}
+
+.iceland > .strip {
+  background-color: #fff;
+  position: absolute;
+}
+
+.iceland > .strip:nth-child(1) {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  top: 67.5px;
+}
+
+.iceland > .strip:nth-child(2) {
+  height: 100%;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  left: 70px;
+}
+
+.iceland > .strip:nth-child(1)::before,
+.iceland > .strip:nth-child(2)::before {
+  content: '';
+  display: block;
+  background-color: crimson;
+  position: relative;
+  z-index: 99;
+}
+
+.iceland > .strip:nth-child(1)::before {
+  width: 100%;
+  height: 50%;
+}
+
+.iceland > .strip:nth-child(2)::before {
+  height: 100%;
+  width: 50%;
+}
+
+.czech {
+  position: relative;
+}
+
+.czech > .triangle {
+  top: 0px;
+  position: absolute;
+  border-top: 88px solid transparent;
+  border-left: 140px solid #11457e;
+  border-bottom: 88px solid transparent;
+  border-radius: 3px;
+}
+
+.czech::before,
+.czech::after {
+  content: '';
+  display: block;
+  height: 50%;
+}
+
+.czech::before {
+  background-color: #fff;
+}
+
+.czech::after {
+  background-color: #d7141a;
+}
